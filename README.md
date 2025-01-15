@@ -32,12 +32,12 @@
     docker run -it -d --name zzqy -v $PWD:/workspace -p 8002:8002 sophgo/tpuc_dev:v3.2 /bin/bash
 ```
 其中， zzqy 为容器名称, 可以自定义； $PWD 为当前目录，与容器的 /workspace 目录同步。
-#### ③启动容器， zzqy 为容器名称：
+### ③启动容器， zzqy 为容器名称：
 ```bash
     docker start zzqy
     docker exec -it zzqy /bin/bash
 ```
-#### ④安装tpu_mlir依赖：
+### ④安装tpu_mlir依赖：
 ```bash
     # 安装全部依赖
     pip install tpu_mlir[all]
