@@ -1,6 +1,6 @@
 #!/bin/bash
 model_dir=$(dirname $(readlink -f "$0"))
-model_name="yolov8m_Xray_F32_1b"
+model_name="yolov8s_Xray_F32_1b"
 echo "current path : $model_dir"
 
 function mv_yolov8_seg(){
