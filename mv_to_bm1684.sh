@@ -1,13 +1,10 @@
 #!/bin/bash
 # 上传到少林派命令
-scp -r ../yolov8_seg_Xray/ linaro@192.168.10.1:/data
+scp -r yolov8s_Xray_F32_1b/ linaro@192.168.10.1:/data
 
+# 查看TCP端口
 netstat -tlnp | grep 6666
-kill 6666
-
-sudo vim /etc/rc.local
-
-/home/linaro/yolov8_opencv_tcp_server.sh
+kill UID
 
 # 后台运行python文件
 nohup python3 -u yolov8_opencv_tcp_server.py > yolov8_opencv_tcp_server.log 2>&1 &
