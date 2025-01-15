@@ -84,7 +84,7 @@
     mv yolov8s-seg-Xray-1b.onnx ../../onnx/ # 移动到onnx文件下
     deactivate # 退出虚拟环境
 ```
-### ③编译Bmodel模型,在scripts文件下有编译为FP32、INT8Bmodel文件
+### ②编译Bmodel模型,在scripts文件下有编译为FP32、INT8Bmodel文件
 ```bash
     cd ../scripts/
     # 执行编译文件之前需要进行参数调整，对gen_fp32bmodel_mlir.py文件进行修改
@@ -94,9 +94,9 @@
     # 修改 gen_intbmodel_mlir('yolov8s', 'Xray', 1, '../models/bm1684', 'bm1684', 320, 'INT8')函数参数 
     python3 gen_int8bmodel_mlir.py # 编译为INT8Bmodel
 ```
-### ④查看../models/bm1684文件是否存在相应的FP32、INT8Bmodel模型文件
+### ③查看../models/bm1684文件是否存在相应的FP32、INT8Bmodel模型文件
 
-### ⑤修改datasets文件下的test_Xray图片、coco_Xray.names（自定义数据集的img和labels）
+### ④修改datasets文件下的test_Xray图片、coco_Xray.names（自定义数据集的img和labels）
 ```bash
     # coco_Xray.names的格式（labels的中英文）
     __background__:背景
