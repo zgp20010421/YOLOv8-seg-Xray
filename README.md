@@ -42,7 +42,7 @@
     # 安装全部依赖
     pip install tpu_mlir[all]
 ```
-### ⑤请从Github的（https://github.com/sophgo/tpu-mlir/releases/）处下载tpu-mlir-resource.tar并解压，解压后将文件夹重命名为tpu_mlir_resource：
+### ⑤请从Github的 https://github.com/sophgo/tpu-mlir/releases/ 处下载tpu-mlir-resource.tar并解压，解压后将文件夹重命名为tpu_mlir_resource：
 ```bash
     # 安装全部依赖
     tar -xvf tpu-mlir-resource.tar
@@ -54,13 +54,13 @@
 ```bash
     cd tpu-mlir-resource/
 ```
-### ②.下载yolov8-seg编译文件和推理代码
+### ②下载yolov8-seg编译文件和推理代码
     从Github的https://github.com/zgp20010421/YOLOv8-seg-Xray.git下载解压后,放在tpu-mlir-resource/文件下
 ```bash
     # git 出现网络问题，可直接点击链接，下载移到tpu-mlir-resource/文件下
     git clone https://github.com/zgp20010421/YOLOv8-seg-Xray.git
 ```
-#### ③启动容器， zzqy 为容器名称：
+### ③启动容器， zzqy 为容器名称：
 ```bash
     # 退出容器 or重启 Ubuntu系统需要执行
     docker start zzqy
@@ -68,8 +68,8 @@
     cd tpu-mlir-resource/YOLOv8-seg-Xray  # 切换到YOLOv8-seg-Xray
 ```
 
-#### ④将自定义训练集，训练好的PT权重文件命名为yolov8s-seg-Xray-1b.pt,放在YOLOv8-seg-Xray/models/torch文件下
-#### ⑤创建YOLOv8-seg导出ONNX模型虚拟环境
+### ④将自定义训练集，训练好的PT权重文件命名为yolov8s-seg-Xray-1b.pt,放在YOLOv8-seg-Xray/models/torch文件下
+### ⑤创建YOLOv8-seg导出ONNX模型虚拟环境
 ```bash
     # 在YOLOv8-seg-Xray文件下
     python3 -m venv yolov8-seg  # 创建虚拟环境
